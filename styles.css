@@ -1,0 +1,165 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #1d4350, #a43931);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(30, 30, 40, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4caf50;
+}
+
+header p {
+    color: #cfd8dc;
+    margin: 10px 0;
+}
+
+/* Video Section */
+.video-section {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+/* Button hover effect */
+#copyButton{
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    background-color: green;
+}
+#copyButton:hover {
+    background-color: #81c784;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#remotePeerId{
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    background: #ffffff;
+    color: #333;
+    margin-top: 20px;
+}
+#connectButton{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: lightgreen;
+}
+#connectButton i{
+    color: grey;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Peer ID Section */
+.peer-id-section {
+    margin: 20px 0;
+}
+
+.peer-id-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.peer-id-wrapper input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    background: #ffffff;
+    color: #333;
+}
+
+/* FAB Controls */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4caf50, #81c784);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+}
+
+/* FAB Variants */
+.call {
+    background: linear-gradient(45deg, #2196f3, #64b5f6);
+}
+
+.hangup {
+    background: linear-gradient(45deg, #f44336, #e57373);
+}
+
+.mute-audio {
+    background: linear-gradient(45deg, #ff9800, #ffb74d);
+}
+
+.mute-video {
+    background: linear-gradient(45deg, #673ab7, #9575cd);
+}
+
+.share-screen {
+    background: linear-gradient(45deg, #00bcd4, #4dd0e1);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat - Modern FAB Design</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Connectify</h1>
+            <p>Seamless real-time collaboration</p>
+        </header>
+        <main>
+            <section class="peer-id-section">
+                <h2>Your Peer ID</h2>
+                <div class="peer-id-wrapper">
+                    <input type="text" id="peerIdDisplay" readonly>
+                    <button id="copyButton" title="Copy Peer ID"><i class="fas fa-copy"></i></button>
+                </div>
+                <input type="text" id="remotePeerId" placeholder="Enter Peer ID">
+                <button id="connectButton" class="primary-button"><i class="fas fa-link"></i> Connect</button>
+            </section>
+
+            <section class="video-section">
+                <video id="localVideo" autoplay muted></video>
+                <div id="remoteVideoContainer"></div>
+            </section>
+
+            <!-- FAB Controls -->
+            <div class="fab-container">
+                <button id="startButton" class="fab" title="Start Video"><i class="fas fa-video"></i></button>
+                <button id="callButton" class="fab call" title="Call" disabled><i class="fas fa-phone"></i></button>
+                <button id="hangupButton" class="fab hangup" title="End Call" disabled><i class="fas fa-phone-slash"></i></button>
+                <button id="muteAudioButton" class="fab mute-audio" title="Mute Mic" disabled><i class="fas fa-microphone-slash"></i></button>
+                <button id="muteVideoButton" class="fab mute-video" title="Mute Video" disabled><i class="fas fa-video-slash"></i></button>
+                <button id="screenShareButton" class="fab share-screen" title="Share Screen" disabled><i class="fas fa-desktop"></i></button>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
